@@ -1,0 +1,29 @@
+% Definicija problema: Ta del kode določa, kaj želimo doseči z genetskim algoritmom. 
+% V tem primeru želimo poiskati izraz, ki ustreza določeni vrednosti, in imamo na voljo število operacij.
+% 
+% Inicializacija: Algoritem najprej inicializira populacijo. 
+% V tem primeru je populacija niz operacij, ki so izbrane naključno. 
+% Vsak posameznik v populaciji je potencialna rešitev problema.
+% 
+% Izračun prileganja (fitnesa): Za vsakega posameznika v populaciji izračunamo njegovo prileganje. 
+% Prileganje je merilo, kako dobro posameznik reši določen problem. 
+% V tem primeru prileganje izračunamo kot absolutno vrednost razlike med želeno vrednostjo in vrednostjo, ki jo generira posameznikov izraz.
+% 
+% Izbor staršev: Ko imamo izračunane vrednosti prileganja za celotno populacijo, 
+% izberemo starše za naslednjo generacijo. To naredimo s postopkom selekcije, 
+% kjer so posamezniki z boljšim prileganjem bolj verjetno izbrani. 
+% V tem primeru uporabljamo metodo ruletnega kolesa za izbor staršev.
+% 
+% Križanje (crossover): Nato izvedemo križanje med starši, da ustvarimo otroke za naslednjo generacijo. 
+% Križanje vključuje združevanje delov dveh staršev, da se ustvari potomec. 
+% V tem primeru se križanje izvaja na naključno izbrani točki v nizu operacij.
+% 
+% Mutacija: Po križanju izvedemo mutacijo, da se zagotovi raznolikost v populaciji. 
+% Mutacija vključuje naključno spremembo dela potomca. 
+% V tem primeru mutacija vključuje zamenjavo naključno izbrane operacije v nizu s drugo naključno izbrano operacijo.
+% 
+% Ponavljanje korakov 3-6: Ti koraki se ponavljajo za določeno število generacij ali dokler ni najdena rešitev. 
+% V vsaki generaciji se populacija posodobi z novimi potomci in se izračuna novo prileganje.
+% 
+% Povratna informacija: Na koncu se izpišejo rezultati, vključno s številom opravljenih iteracij, 
+% najboljšo najdeno enačbo, njeno vrednostjo in vrednostjo kriterijske funkcije.
