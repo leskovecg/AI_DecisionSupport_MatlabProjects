@@ -1,0 +1,85 @@
+# ─────────────────────────────────────────────────────────────
+# Whitelist: ignoriraj VSE, nato izrecno spusti skozi samo tisto,
+# kar gre v repo:
+#   VAJA<n>/figs/**, VAJA<n>/tabs/**
+#   VAJA<n>/navodila<n>.pdf
+#   VAJA<n>/vaja<n>.m, vaja<n>.tex, vaja<n>.pdf
+# ─────────────────────────────────────────────────────────────
+
+# 1) ignoriraj vse
+*
+
+# 2) dovoli git-u, da se sprehodi v mape (mape same po sebi niso trackane)
+!*/
+
+# 3) korenske datoteke, ki jih hočemo
+!.gitignore
+!README.md
+
+# 4) figs/ in tabs/ znotraj vaj (samo na 1. nivoju, ne v old/)
+!VAJA*/figs/
+!VAJA*/figs/**
+!VAJA*/tabs/
+!VAJA*/tabs/**
+
+# 5) navodila in končni izdelki vaje
+!VAJA*/navodila*.pdf
+!VAJA*/vaja[0-9].m
+!VAJA*/vaja[0-9].tex
+!VAJA*/vaja[0-9].pdf
+
+# 6) izjeme – podatki, ki jih hočemo imeti na gitu
+!VAJA3/VAJA3.mat
+
+# ─────────────────────────────────────────────────────────────
+# Varovalke: tudi če bi kateri od zgornjih vzorcev preveč spustil,
+# to eksplicitno ostane zunaj.
+# ─────────────────────────────────────────────────────────────
+
+# vaje, ki še niso za na git – odstrani vrstico, ko je vaja gotova
+VAJA4/
+VAJA5/
+VAJA6/
+
+# stare/arhivske mape
+old/
+**/old/
+archive/
+backup/
+
+# LaTeX artefakti
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# MATLAB šara
+*.asv
+*.m~
+*.autosave
+slprj/
+codegen/
+*.mex*
+
+# okolje / orodja
+.vscode/
+.claude/
+.DS_Store
+Thumbs.db
+
+# privatno – ne gre na splet
+feedback_asistenta.xlsx
+
+# literatura (avtorske pravice)
+MoznaDodatnaLiteratura.pdf
+Knjiga-ISO-SKRIPTA-Oktober.pdf
